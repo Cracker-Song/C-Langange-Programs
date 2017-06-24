@@ -1,4 +1,0 @@
-g++ xxx.cpp -o xxx   将xxx.cpp编译为xxx（否则默认名称为a）
-cd C:\Users\liang\Desktop   进入C:\Users\liang\Desktop
-start kid.exe   执行kid.exe程序
-del kid.exe    删除文件
