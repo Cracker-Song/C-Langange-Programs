@@ -37,9 +37,9 @@ Status Calculatepolyn(char,Linklist,Linklist,Linklist &);
 Status Multicalculation(char *,Linklist *,Linklist &,int *);
 int main(void)
 {
-	system("color 70");
+	//system("color 70");
     int menu=-1,submenu,pos1=-1,pos2,pos3,pos4,sumpolyn=List_Init_Size,ifquit,polynlength,travel,undefined,empty,full,power,diff,i,j;
-    double value,x,x1,x2,taylor;  
+    double value,x,x1,x2,taylor;
     int *psumpolyn=&sumpolyn;
     char ch;
     char input[30]={'\0'};
@@ -50,26 +50,26 @@ int main(void)
 			for(int j=0;j<10;f[i][j]=0,j++);
 			i++;
 		}
-	    flag:printf("                                    ²Ëµ¥\n***************************************************************************\n00:ÍË³öÖ÷²Ëµ¥     01:¶àÏîÊ½´´½¨     02:¶àÏîÊ½ÏÔÊ¾     03:¸´ÖÆ¶àÏîÊ½\n04:¶àÏîÊ½ÇóºÍ     05:¶àÏîÊ½Çó²î     06:¶àÏîÊ½ÇóÖµ     07:¶àÏîÊ½Ïú»Ù\n08:¶àÏîÊ½Çå¿Õ     09:¶àÏîÊ½ÐÞ¸Ä     10:¶àÏîÊ½³Ë·¨     11:¶àÏîÊ½³ý·¨\n12:¶àÏîÊ½³Ë·½     13:¶àÏîÊ½Çóµ¼Êý   14:¶àÏîÊ½²»¶¨»ý·Ö 15:¶àÏîÊ½¶¨»ý·Ö\n16:×î´ó¹«ÒòÊ½     17:×îÐ¡¹«±¶Ê½     18:¶àÏîÊ½¸´ºÏÔËËã\n***************************************************************************\nÇëÑ¡ÔñËùÐè¹¦ÄÜ\n");
-		scanf("%d",&menu); //Õ³Ìù¶àÏîÊ½£¬¶àÏîÊ½ÅÅÐò£» 
+	    flag:printf("                                    ï¿½Ëµï¿½\n***************************************************************************\n00:ï¿½Ë³ï¿½ï¿½ï¿½ï¿½Ëµï¿½     01:ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½     02:ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Ê¾     03:ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½Ê½\n04:ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½     05:ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½     06:ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Öµ     07:ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n08:ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½     09:ï¿½ï¿½ï¿½ï¿½Ê½ï¿½Þ¸ï¿½     10:ï¿½ï¿½ï¿½ï¿½Ê½ï¿½Ë·ï¿½     11:ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n12:ï¿½ï¿½ï¿½ï¿½Ê½ï¿½Ë·ï¿½     13:ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½   14:ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 15:ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n16:ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½     17:ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Ê½     18:ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n***************************************************************************\nï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½è¹¦ï¿½ï¿½\n");
+		scanf("%d",&menu); //Õ³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	    if(menu<0||menu>18||menu==-1){
-	    	int choice=MessageBox(NULL,"ÊäÈë´íÎó£¬ÖØÐÂÊäÈëÑ¡Ôñyes£¬ÍË³ö³ÌÐòÑ¡Ôñno","ÇëÑ¡Ôñ",MB_YESNO);
+	    	int choice=MessageBox(NULL,"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½yesï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½no","ï¿½ï¿½Ñ¡ï¿½ï¿½",MB_YESNO);
 	    	if(choice==IDYES) fflush(stdin);
 			else return 0;
 			system("cls");
 	    }
-	    switch(menu){ 
-		    case 0:printf("ÍË³ö.»¶Ó­ÔÙ´ÎÊ¹ÓÃ!");
+	    switch(menu){
+		    case 0:printf("ï¿½Ë³ï¿½.ï¿½ï¿½Ó­ï¿½Ù´ï¿½Ê¹ï¿½ï¿½!");
 		           return 0;
-		    case 1:printf("¶àÏîÊ½´´½¨\n");
+		    case 1:printf("ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 		           while(1){
-                       printf("ÇëÊäÈëÐÂ¶àÏîÊ½µÄÎ»ÖÃ(1--%d)\n",*psumpolyn);
+                       printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Î»ï¿½ï¿½(1--%d)\n",*psumpolyn);
 	                   scanf("%d",&pos1);
 	                   if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]==NULL))
 	    	               break;
 	                   else
 	                   {
-	                	   	int choice=MessageBox(NULL,"ÊäÈë´íÎó£¬ÖØÐÂÊäÈëÑ¡Ôñyes£¬ÍË³ö³ÌÐòÑ¡Ôñno","ÇëÑ¡Ôñ",MB_YESNO);
+	                	   	int choice=MessageBox(NULL,"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½yesï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½no","ï¿½ï¿½Ñ¡ï¿½ï¿½",MB_YESNO);
 	   					 	if(choice==IDYES) fflush(stdin);
 							else return 0;
 							//system("cls");
@@ -77,26 +77,26 @@ int main(void)
 	               }
 	               Fullprotection(Polynlink,psumpolyn);
 		           Createpolyn(L);
-		           printf("ÊäÈëÍê±Ï\n"); 
+		           printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 		           Polynlink[pos1-1]=L;
 		           break;
-		    case 2:printf("ÏÔÊ¾¶àÏîÊ½\n");
+		    case 2:printf("ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ê½\n");
 		           ifquit=0;
 			       for(;1;){
-			       	   printf("     ²Ëµ¥\n***************\n00:ÍË³ö±¾¹¦ÄÜ\n01:ÏÔÊ¾Ò»¸ö¶àÏîÊ½\n02:ÏÔÊ¾¶à¸ö¶àÏîÊ½\n03:ÏÔÊ¾È«²¿¶àÏîÊ½\n***************\nÇëÊäÈëËùÐè¹¦ÄÜ\n");
+			       	   printf("     ï¿½Ëµï¿½\n***************\n00:ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n01:ï¿½ï¿½Ê¾Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½\n02:ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½\n03:ï¿½ï¿½Ê¾È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½\n***************\nï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½è¹¦ï¿½ï¿½\n");
 			       	   scanf("%d",&submenu);
 			       	   if(submenu<0||submenu>3)
 			       	       return error;
 			       	   switch(submenu){
-			       	   	   case 0:printf("ÍË³ö±¾¹¦ÄÜ\n");
+			       	   	   case 0:printf("ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 			       	   	          ifquit++;
 								  break;
-			       	   	   case 1:printf("ÇëÊäÈëÏÔÊ¾¶àÏîÊ½ÐòºÅ\n");
+			       	   	   case 1:printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 		                          scanf("%d",&pos1);
 		                          while(1){
-			       	                  if((pos1>=1)&&(pos1<=(*psumpolyn))) 
+			       	                  if((pos1>=1)&&(pos1<=(*psumpolyn)))
 			       	                      break;
-			       	                  int choice=MessageBox(NULL,"ÊäÈë´íÎó£¬ÖØÐÂÊäÈëÑ¡Ôñyes£¬ÍË³öÑ¡Ôñno","ÇëÑ¡Ôñ",MB_YESNO);
+			       	                  int choice=MessageBox(NULL,"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½yesï¿½ï¿½ï¿½Ë³ï¿½Ñ¡ï¿½ï¿½no","ï¿½ï¿½Ñ¡ï¿½ï¿½",MB_YESNO);
 	   					 		      if(choice==IDYES)
 										  {
 											fflush(stdin);
@@ -106,54 +106,54 @@ int main(void)
 			                      }
 		                          Printpolyn(Polynlink[pos1-1]);
 		                          break;
-			               case 2:printf("ÏÔÊ¾¶à¸ö¶àÏîÊ½\n");
-			                      printf("ÇëÊäÈëÇø¼äÏÂÏÞ\n");
+			               case 2:printf("ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½\n");
+			                      printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 			                      scanf("%d",&pos1);
 			                      while(1){
 			       	                  if((pos1>=1)&&(pos1<=(*psumpolyn)))
 			       	                      break;
-			       	                  printf("ÇëÖØÐÂÊäÈëÇø¼äÏÂÏÞ\n");
+			       	                  printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 			       	                  scanf("%d",&pos1);
 			                      }
-			                      printf("ÇëÊäÈëÇø¼äÉÏÏÞ\n");
+			                      printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 			                      scanf("%d",&pos2);
 			                      while(1){
 			       	                  if((pos2>=1)&&(pos2<=(*psumpolyn))&&(pos2>=pos1))
 			       	                      break;
-			       	                  printf("ÇëÖØÐÂÊäÈëÇø¼äÉÏÏÞ\n");
+			       	                  printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 			       	                  scanf("%d",&pos2);
 			                      }
 			                      if(Printaggregationpolyn(pos1,pos2,Polynlink)==ok)
-								      printf("ÏÔÊ¾¶àÏîÊ½³É¹¦\n");
-								  else 
-								      printf("ÏÔÊ¾¶àÏîÊ½Ê§°Ü\n"); 
+								      printf("ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ê½ï¿½É¹ï¿½\n");
+								  else
+								      printf("ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ê½Ê§ï¿½ï¿½\n");
 								  break;
-						   case 3:printf("ÏÔÊ¾È«²¿¶àÏîÊ½\n");
+						   case 3:printf("ï¿½ï¿½Ê¾È«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½\n");
 						          if(Printaggregationpolyn(1,sumpolyn,Polynlink)==ok)
-								      printf("ÏÔÊ¾¶àÏîÊ½³É¹¦\n");
-								  else 
-								      printf("ÏÔÊ¾¶àÏîÊ½Ê§°Ü\n"); 
-								  break;	
+								      printf("ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ê½ï¿½É¹ï¿½\n");
+								  else
+								      printf("ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ê½Ê§ï¿½ï¿½\n");
+								  break;
 			       	   }
 			       	   if(ifquit==1)
 			       	       break;
 			       }
 		           break;
-		    case 3:printf("¶àÏîÊ½¸´ÖÆ\n");
-		           printf("ÇëÊäÈëÔ­¶àÏîÊ½µÄÎ»Ðò\n");
+		    case 3:printf("ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+		           printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Î»ï¿½ï¿½\n");
 		           scanf("%d",&pos1);
 		           while(1){
 		           	   if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]!=NULL))
 		           	       break;
-		           	   printf("ÇëÖØÐÂÊäÈë´ý¸´ÖÆ¶àÏîÊ½µÄÎ»Ðò\n");
+		           	   printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Î»ï¿½ï¿½\n");
 			       	   scanf("%d",&pos1);
 		           }
-	    	       printf("ÇëÊäÈëÐÂ¶àÏîÊ½Î»Ðò\n");
+	    	       printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½Ê½Î»ï¿½ï¿½\n");
 			       scanf("%d",&pos2);
 			       while(1){
 			       	   if((pos2>=1)&&(pos2<=(*psumpolyn))&&(Polynlink[pos2-1]==NULL))
 			       	       break;
-	    	           printf("ÇëÖØÐÂÊäÈëÐÂ¶àÏîÊ½Î»Ðò\n");
+	    	           printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½Ê½Î»ï¿½ï¿½\n");
 			           scanf("%d",&pos2);
 			       }
 			       Fullprotection(Polynlink,psumpolyn);
@@ -162,94 +162,94 @@ int main(void)
 			           return overflow;
 			       Polynlink[pos2-1]=L;
 				   if(Copypolyn(Polynlink[pos1-1],Polynlink[pos2-1]))
-				       printf("¸´ÖÆ³É¹¦\n");
-				   break; 
-			case 4:printf("¶àÏîÊ½ÇóºÍ\n");
-			       printf("ÇëÊäÈëÇóºÍµÄµÚÒ»¸ö¶àÏîÊ½ÐòºÅ\n");
+				       printf("ï¿½ï¿½ï¿½Æ³É¹ï¿½\n");
+				   break;
+			case 4:printf("ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+			       printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÍµÄµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 				   scanf("%d",&pos1);
 				   while(1){
 				       if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]))
 				           break;
-				       printf("ÇëÖØÐÂÊäÈëÇóºÍµÄµÚÒ»¸ö¶àÏîÊ½ÐòºÅ\n");
-				       scanf("%d",&pos1); 
+				       printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÍµÄµï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+				       scanf("%d",&pos1);
 				   }
-				   printf("ÇëÊäÈëÇóºÍµÄµÚ¶þ¸ö¶àÏîÊ½ÐòºÅ\n");
+				   printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÍµÄµÚ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 				   scanf("%d",&pos2);
 				   while(1){
 				   	   if((pos2>=1)&&(pos2<=(*psumpolyn))&&(Polynlink[pos2-1]))
 				   	       break;
-				   	   printf("ÇëÖØÐÂÊäÈëÇóºÍµÄµÚ¶þ¸ö¶àÏîÊ½ÐòºÅ\n");
-				       scanf("%d",&pos2);    
+				   	   printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÍµÄµÚ¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+				       scanf("%d",&pos2);
 				   }
-				   printf("ÇëÊäÈëºÍ¶àÏîÊ½µÄÐòºÅ\n");
+				   printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 				   scanf("%d",&pos3);
 				   while(1){
 				   	   if((pos3>=1)&&(pos3<=(*psumpolyn))&&(!Polynlink[pos3-1]))
 				   	       break;
-					   printf("ÇëÖØÐÂÊäÈëºÍ¶àÏîÊ½µÄÐòºÅ\n");
-				       scanf("%d",&pos3);	    
-				   } 
+					   printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
+				       scanf("%d",&pos3);
+				   }
 				   Fullprotection(Polynlink,psumpolyn);
 				   Initpolyn(L);
 			       if(!L)
 			           return overflow;
 			       Polynlink[pos3-1]=L;
 				   if(Addpolyn(Polynlink[pos1-1],Polynlink[pos2-1],Polynlink[pos3-1]))
-				       printf("ÇóºÍ³É¹¦\n");
-				   break; 
-			case 5:printf("¶àÏîÊ½Çó²î\n");
-			       printf("ÇëÊäÈë±»¼õ¶àÏîÊ½ÐòºÅ\n");
+				       printf("ï¿½ï¿½ï¿½Í³É¹ï¿½\n");
+				   break;
+			case 5:printf("ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+			       printf("ï¿½ï¿½ï¿½ï¿½ï¿½ë±»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       scanf("%d",&pos1);
 			       while(1){
 			       	   if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]!=NULL))
 			       	       break;
-			       	   printf("ÇëÖØÐÂÊäÈë±»¼õ¶àÏîÊ½ÐòºÅ\n");
+			       	   printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë±»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	   scanf("%d",&pos1);
 			       }
-			       printf("ÇëÊäÈë¼õ¶àÏîÊ½ÐòºÅ\n");
+			       printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       scanf("%d",&pos2);
 			       while(1){
 			       	   if((pos2>=1)&&(pos2<=(*psumpolyn))&&(Polynlink[pos2-1]!=NULL))
 			       	       break;
-			       	   printf("ÇëÖØÐÂÊäÈë¼õ¶àÏîÊ½ÐòºÅ\n");
+			       	   printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	   scanf("%d",&pos2);
-			       } 
-			       printf("ÇëÊäÈëÐÂ¶àÏîÊ½ÐòºÅ\n");
+			       }
+			       printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       scanf("%d",&pos3);
 			       while(1){
 			       	   if((pos3>=1)&&(pos3<=(*psumpolyn))&&(Polynlink[pos3-1]==NULL))
 			       	       break;
-			       	   printf("ÇëÖØÐÂÊäÈëÐÂ¶àÏîÊ½ÐòºÅ\n");
+			       	   printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	   scanf("%d",&pos3);
-			       } 
+			       }
 			       Fullprotection(Polynlink,psumpolyn);
 			       Initpolyn(L);
 			       Polynlink[pos3-1]=L;
 			       if(Substractpolyn(Polynlink[pos1-1],Polynlink[pos2-1],Polynlink[pos3-1]))
-				       printf("Çó²î³É¹¦\n");
-				   break; 
-			case 6:printf("¶àÏîÊ½ÇóÖµ\n");
-			       printf("ÇëÊäÈë´ýÇóÖµ¶àÏîÊ½ÐòºÅ\n");
+				       printf("ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½\n");
+				   break;
+			case 6:printf("ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Öµ\n");
+			       printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       scanf("%d",&pos1);
 			       while(1){
 			       	   if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]!=NULL))
 			       	       break;
-			       	   printf("ÇëÖØÐÂÊäÈë´ýÇóÖµ¶àÏîÊ½ÐòºÅ\n");
+			       	   printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	   scanf("%d",&pos1);
-			       } 
-			       printf("ÇëÊäÈëXµÄÖµ\n");
+			       }
+			       printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Xï¿½ï¿½Öµ\n");
 			       scanf("%lf",&x);
 			       value=0;
 			       if(Envaluepolyn(Polynlink[pos1-1],value,x)){
-			       	   printf("ÇóÖµ³É¹¦\n");
-			           printf("Êä³ö¶àÏîÊ½µÄÖµ\n");
+			       	   printf("ï¿½ï¿½Öµï¿½É¹ï¿½\n");
+			           printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Öµ\n");
 			           printf("%lf",value);
 				   }
 				   else
-				       printf("ÇóÖµÊ§°Ü\n");
+				       printf("ï¿½ï¿½ÖµÊ§ï¿½ï¿½\n");
 			       break;
-			case 7:printf("¶àÏîÊ½Ïú»Ù\n");
-			       printf("ÇëÊäÈë´ýÏú»Ù¶àÏîÊ½ÐòºÅ\n");
+			case 7:printf("ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+			       printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       scanf("%d",&pos1);
 			       while(1){
 			       	   if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]!=NULL))
@@ -259,16 +259,16 @@ int main(void)
 			       	       	system("cls");
 			       	       	goto flag;
 			       	       }
-			       	   printf("ÇëÖØÐÂÊäÈë´ýÏú»Ù¶àÏîÊ½ÐòºÅ\n");
+			       	   printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ù¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	   scanf("%d",&pos1);
 			       }
 			       if(Destroypolyn(Polynlink[pos1-1]))
-			           printf("É¾³ý³É¹¦\n");
+			           printf("É¾ï¿½ï¿½ï¿½É¹ï¿½\n");
 			       else
-				       printf("É¾³ýÊ§°Ü\n"); 
+				       printf("É¾ï¿½ï¿½Ê§ï¿½ï¿½\n");
 				   break;
-			case 8:printf("¶àÏîÊ½Çå¿Õ\n");
-			       printf("ÇëÊäÈë´ýÇå¿Õ¶àÏîÊ½ÐòºÅ\n");
+			case 8:printf("ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+			       printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       scanf("%d",&pos1);
 			       while(1){
 			       	   if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]!=NULL))
@@ -277,22 +277,22 @@ int main(void)
 			       	       	  system("cls");
 			       	       	  goto flag;
 			       	       }
-			       	   printf("ÇëÖØÐÂÊäÈë´ýÇå¿Õ¶àÏîÊ½ÐòºÅ\n");
+			       	   printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	   scanf("%d",&pos1);
 			       }
 			       if(Clearpolyn(Polynlink[pos1-1]))
-			           printf("Çå¿Õ³É¹¦\n");
+			           printf("ï¿½ï¿½ï¿½Õ³É¹ï¿½\n");
 			       else
-				       printf("Çå¿ÕÊ§°Ü\n");
+				       printf("ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½\n");
 				   break;
-		   case 9:{printf("ÐÞ¸Ä¶àÏîÊ½\n");
+		   case 9:{printf("ï¿½Þ¸Ä¶ï¿½ï¿½ï¿½Ê½\n");
 		           ifquit=0;
-		           flag1:printf("ÇëÊäÈëÒªÐÞ¸ÄµÄ¶àÏîÊ½ÐòÊý\n");
+		           flag1:printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Þ¸ÄµÄ¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 		           pos1=-1;
 		           scanf("%d",&pos1);
 		           if(pos1==-1||((pos1<1)&&(pos1>(*psumpolyn))&&(Polynlink[pos1-1]==NULL)))
 		           {
-		           	int choice=MessageBox(NULL,"ÊäÈë´íÎó£¬ÖØÐÂÊäÈëÑ¡Ôñyes£¬ÍË³ö³ÌÐòÑ¡Ôñno","ÇëÑ¡Ôñ",MB_YESNO);
+		           	int choice=MessageBox(NULL,"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½yesï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½no","ï¿½ï¿½Ñ¡ï¿½ï¿½",MB_YESNO);
 	   				if(choice==IDYES)
 					   {
 					   	fflush(stdin);
@@ -301,7 +301,7 @@ int main(void)
 					else return 0;
 		           }
 		           float newcoe;
-		           printf("ÇëÊäÈëÒªÐÞ¸ÄµÄÏîµÄÖ¸Êý,ÐÂµÄÏµÊý\n");
+		           printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Þ¸Äµï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½,ï¿½Âµï¿½Ïµï¿½ï¿½\n");
 		           Linklist exchange=Polynlink[pos1-1];
 		           int countex=0,exexp;
 		           scanf("%d%f",&exexp,&newcoe);
@@ -314,284 +314,284 @@ int main(void)
 					   }
 		           	exchange=exchange->next;
 		           }
-		           if(countex==0) printf("ÊäÈëµÄÖ¸Êý²»´æÔÚ\n");
+		           if(countex==0) printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 		           break;}
-			 case 10:printf("¶àÏîÊ½³Ë·¨\n");
-			         printf("ÇëÊäÈëµÚÒ»¸ö³Ë¶àÏîÊ½ÐòºÅ\n");
+			 case 10:printf("ï¿½ï¿½ï¿½ï¿½Ê½ï¿½Ë·ï¿½\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			         scanf("%d",&pos1);
 			         while(1){
 			       	   if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]!=NULL))
 			       	       break;
-			       	   printf("ÇëÖØÐÂÊäÈëµÚÒ»¸ö³Ë¶àÏîÊ½ÐòºÅ\n");
+			       	   printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	   scanf("%d",&pos1);
 			         }
-			         printf("ÇëÊäÈëµÚ¶þ¸ö³Ë¶àÏîÊ½ÐòºÅ\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			         scanf("%d",&pos2);
 			         while(1){
 			       	     if((pos2>=1)&&(pos2<=(*psumpolyn))&&(Polynlink[pos2-1]!=NULL))
 			       	         break;
-			       	     printf("ÇëÖØÐÂÊäÈëµÚ¶þ¸ö³Ë¶àÏîÊ½ÐòºÅ\n");
+			       	     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½Ë¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	     scanf("%d",&pos2);
 			         }
-			         printf("ÇëÊäÈë³Ë»ý¶àÏîÊ½ÐòºÅ\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë»ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			         scanf("%d",&pos3);
 			         while(1){
 			       	     if((pos3>=1)&&(pos3<=(*psumpolyn))&&(Polynlink[pos3-1]==NULL))
 			       	         break;
-			       	     printf("ÇëÖØÐÂÊäÈë³Ë»ý¶àÏîÊ½ÐòºÅ\n");
+			       	     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë»ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	     scanf("%d",&pos3);
-			         } 
+			         }
 			         Fullprotection(Polynlink,psumpolyn);
 			         Initpolyn(L);
 			         Polynlink[pos3-1]=L;
 			         if(Multiplypolyn(Polynlink[pos1-1],Polynlink[pos2-1],Polynlink[pos3-1])==ok)
-				         printf("Çó»ý³É¹¦\n");
-				     break;    
-             case 11:printf("¶àÏîÊ½³ý·¨\n");
-			         printf("ÇëÊäÈë±»³ý¶àÏîÊ½ÐòºÅ\n");
+				         printf("ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½\n");
+				     break;
+             case 11:printf("ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ë±»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 				     scanf("%d",&pos1);
 				     while(1){
 				         if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]!=NULL))
 				             break;
-				         printf("ÇëÖØÐÂÊäÈë±»³ý¶àÏîÊ½ÐòºÅ\n");
-				         scanf("%d",&pos1); 
+				         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë±»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+				         scanf("%d",&pos1);
 				     }
-				     printf("ÇëÊäÈë³ý¶àÏîÊ½ÐòºÅ\n");
+				     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 				     scanf("%d",&pos2);
 				     while(1){
 				   	     if((pos2>=1)&&(pos2<=(*psumpolyn))&&(Polynlink[pos2-1]!=NULL))
 				   	         break;
-				   	     printf("ÇëÖØÐÂÊäÈë³ý¶àÏîÊ½ÐòºÅ\n");
-				         scanf("%d",&pos2);    
+				   	     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+				         scanf("%d",&pos2);
 				     }
-				     printf("ÇëÊäÈëÉÌ¶àÏîÊ½µÄÐòºÅ\n");
+				     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 				     scanf("%d",&pos3);
 				     while(1){
 				   	     if((pos3>=1)&&(pos3<=(*psumpolyn))&&(Polynlink[pos3-1]==NULL))
 				   	         break;
-					     printf("ÇëÖØÐÂÊäÈëÉÌ¶àÏîÊ½µÄÐòºÅ\n");
-				         scanf("%d",&pos3);	    
-				     } 
+					     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
+				         scanf("%d",&pos3);
+				     }
 				     //Fullprotection(Polynlink,psumpolyn);
 				     Initpolyn(L);
 			         if(!L)
 			             return overflow;
 			         Polynlink[pos3-1]=L;
-			         printf("ÇëÊäÈëÓà¶àÏîÊ½µÄÐòºÅ\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 				     scanf("%d",&pos4);
 				     while(1){
 				   	     if((pos4>=1)&&(pos4<=(*psumpolyn))&&(Polynlink[pos4-1]==NULL))
 				   	         break;
-					     printf("ÇëÖØÐÂÊäÈëÓà¶àÏîÊ½µÄÐòºÅ\n");
-				         scanf("%d",&pos4);	    
-				     } 
+					     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
+				         scanf("%d",&pos4);
+				     }
 				     Fullprotection(Polynlink,psumpolyn);
 				     Initpolyn(L);
 			         if(!L)
 			             return overflow;
 			         Polynlink[pos4-1]=L;
 				     if(Dividepolyn(Polynlink[pos1-1],Polynlink[pos2-1],Polynlink[pos3-1],Polynlink[pos4-1])==ok)
-				         printf("³ý·¨³É¹¦\n");
-				     else 
-				         printf("³ý·¨Ê§°Ü\n");
-				     break;	
-			 case 12:printf("¶àÏîÊ½³Ë·½\n");	
-			         printf("ÇëÊäÈë´ý³Ë·½¶àÏîÊ½ÐòºÅ\n");
+				         printf("ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½\n");
+				     else
+				         printf("ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½\n");
+				     break;
+			 case 12:printf("ï¿½ï¿½ï¿½ï¿½Ê½ï¿½Ë·ï¿½\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 				     scanf("%d",&pos1);
 				     while(1){
 				         if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]!=NULL))
 				             break;
-				         printf("ÇëÖØÐÂÊäÈë´ý³Ë·½¶àÏîÊ½ÐòºÅ\n");
-				         scanf("%d",&pos1); 
+				         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+				         scanf("%d",&pos1);
 				     }
-				     printf("ÇëÊäÈë³Ë·½¶àÏîÊ½ÐòºÅ\n");
+				     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 				     scanf("%d",&pos2);
 				     while(1){
 				   	     if((pos2>=1)&&(pos2<=(*psumpolyn))&&(Polynlink[pos2-1]==NULL))
 				   	         break;
-				   	     printf("ÇëÖØÐÂÊäÈë³Ë·½¶àÏîÊ½ÐòºÅ\n");
-				         scanf("%d",&pos2);    
+				   	     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+				         scanf("%d",&pos2);
 				     }
 				     Initpolyn(L);
 				     if(!L)
 					     return overflow;
 					 Polynlink[pos2-1]=L;
-				     printf("ÇëÊäÈë´Î·½Êý\n");
+				     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î·ï¿½ï¿½ï¿½\n");
 					 scanf("%d",&power);
 					 while(1){
 					 	if(power>0||power<1000)
 					 	    break;
-					 	printf("ÇëÖØÐÂÊäÈë³Ë·½Êý\n");
+					 	printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½\n");
 					 	scanf("%d",&power);
-					 } 
+					 }
 					 if(Powerpolyn(Polynlink[pos1-1],Polynlink[pos2-1],power)==ok)
-					     printf("³Ë·½³É¹¦\n");
-					 else  
-					     printf("³Ë·½Ê§°Ü\n");
+					     printf("ï¿½Ë·ï¿½ï¿½É¹ï¿½\n");
+					 else
+					     printf("ï¿½Ë·ï¿½Ê§ï¿½ï¿½\n");
 					 break;
-			 case 13:printf("¶àÏîÊ½ÇóN½×µ¼Êý\n");
-			         printf("ÇëÊäÈë´ýÇóN½×µ¼Êý¶àÏîÊ½ÐòºÅ\n");
+			 case 13:printf("ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Nï¿½×µï¿½ï¿½ï¿½\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½×µï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 				     scanf("%d",&pos1);
 				     while(1){
 				         if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]!=NULL))
 				             break;
-				         printf("ÇëÖØÐÂÊäÈë´ýÇóN½×µ¼Êý¶àÏîÊ½ÐòºÅ\n");
-				         scanf("%d",&pos1); 
+				         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½×µï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+				         scanf("%d",&pos1);
 				     }
-				     printf("ÇëÊäÈëN½×µ¼Êý¶àÏîÊ½ÐòºÅ\n");
+				     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½×µï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 				     scanf("%d",&pos2);
 				     while(1){
 				   	     if((pos2>=1)&&(pos2<=(*psumpolyn))&&(Polynlink[pos2-1]==NULL))
 				   	         break;
-				   	     printf("ÇëÖØÐÂÊäÈëN½×µ¼Êý¶àÏîÊ½ÐòºÅ\n");
-				         scanf("%d",&pos2);    
+				   	     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Nï¿½×µï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+				         scanf("%d",&pos2);
 				     }
 				     Initpolyn(L);
 				     if(!L)
 					     return overflow;
 					 Polynlink[pos2-1]=L;
-				     printf("ÇëÊäÈëÇóµ¼½×Êý\n");
+				     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½óµ¼½ï¿½ï¿½ï¿½\n");
 					 scanf("%d",&diff);
 					 while(1){
 					 	if(diff>0||diff<1000)
 					 	    break;
-					 	printf("ÇëÖØÐÂÊäÈëÇóµ¼½×Êý\n");
+					 	printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½óµ¼½ï¿½ï¿½ï¿½\n");
 					 	scanf("%d",&diff);
-					 } 
+					 }
 					 if(Ndiffcoefpolyn(Polynlink[pos1-1],Polynlink[pos2-1],diff)==ok)
-					     printf("ÇóN½×µ¼Êý³É¹¦\n");
-					 else  
-					     printf("ÇóN½×µ¼ÊýÊ§°Ü\n");
+					     printf("ï¿½ï¿½Nï¿½×µï¿½ï¿½ï¿½ï¿½É¹ï¿½\n");
+					 else
+					     printf("ï¿½ï¿½Nï¿½×µï¿½ï¿½ï¿½Ê§ï¿½ï¿½\n");
 					 break;
-			 case 14:printf("Çó·Ç¸ºÖ¸Êý¶àÏîÊ½²»¶¨»ý·Ö\n");
-			         printf("ÇëÊäÈë´ýÇó²»¶¨»ý·Ö¶àÏîÊ½ÐòºÅ\n");
+			 case 14:printf("ï¿½ï¿½ï¿½Ç¸ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó²»¶ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 				     scanf("%d",&pos1);
 				     while(1){
 				         if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]!=NULL))
 				             break;
-				         printf("ÇëÖØÐÂÊäÈë´ýÇó²»¶¨»ý·Ö¶àÏîÊ½ÐòºÅ\n");
-				         scanf("%d",&pos1); 
+				         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó²»¶ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+				         scanf("%d",&pos1);
 				     }
-				     printf("ÇëÊäÈë²»¶¨»ý·Ö¶àÏîÊ½ÐòºÅ\n");
+				     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ë²»ï¿½ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 				     scanf("%d",&pos2);
 				     while(1){
 				   	     if((pos2>=1)&&(pos2<=(*psumpolyn))&&(Polynlink[pos2-1]==NULL))
 				   	         break;
-				   	     printf("ÇëÖØÐÂÊäÈë²»¶¨»ý·Ö¶àÏîÊ½ÐòºÅ\n");
-				         scanf("%d",&pos2);    
+				   	     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë²»ï¿½ï¿½ï¿½ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+				         scanf("%d",&pos2);
 				     }
 				     Initpolyn(L);
 				     if(!L)
 					     return overflow;
 					 Polynlink[pos2-1]=L;
 					 if(Indfintegralpolyn(Polynlink[pos1-1],Polynlink[pos2-1])==ok)
-					     printf("Çó²»¶¨»ý·Ö³É¹¦\n");
-					 else  
-					     printf("Çó²»¶¨»ý·ÖÊ§°Ü\n");
+					     printf("ï¿½ó²»¶ï¿½ï¿½ï¿½ï¿½Ö³É¹ï¿½\n");
+					 else
+					     printf("ï¿½ó²»¶ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½\n");
 					 break;
 			 case 15:{
-			 	printf("¸ü¶àÑ¡ÏîÇë°´1£¬¶àÏîÊ½»ý·ÖÇë°´2\n");
+			 	printf("ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ë°´1ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ë°´2\n");
 				 int choice=0;
 				 scanf("%d",&choice);
 				 if(choice==1)
 				 {
 				 	system("start definte.bat");
 				 	break;
-				 } 
+				 }
 				 else
 				 {
-			         printf("Çó·Ç¸ºÖ¸Êý¶àÏîÊ½¶¨»ý·Ö\n");
-			         printf("ÇëÊäÈë´ýÇó¶¨»ý·Ö¶àÏîÊ½ÐòºÅ\n");
+			         printf("ï¿½ï¿½ï¿½Ç¸ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó¶¨»ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 				     scanf("%d",&pos1);
 				     while(1){
 				         if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]!=NULL))
 				             break;
-				         printf("ÇëÖØÐÂÊäÈë´ýÇó¶¨»ý·Ö¶àÏîÊ½ÐòºÅ\n");
-				         scanf("%d",&pos1); 
+				         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó¶¨»ï¿½ï¿½Ö¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
+				         scanf("%d",&pos1);
 				     }
-				     printf("ÇëÊäÈë¶¨»ý·ÖÏÂÏÞ\n");
+				     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ë¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 				     scanf("%lf",&x1);
-				     printf("ÇëÊäÈë¶¨»ý·ÖÉÏÏÞ\n");
+				     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ë¶¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 				     scanf("%lf",&x2);
 				     if(Dfintegralpolyn(Polynlink[pos1-1],value,x1,x2)==ok)
-					     printf("Çó¶¨»ý·Ö³É¹¦£¬¶¨»ý·ÖÖµÎª%lf\n",value);
+					     printf("ï¿½ó¶¨»ï¿½ï¿½Ö³É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÎª%lf\n",value);
 					 else
-					     printf("Çó¶¨»ý·ÖÊ§°Ü\n");
+					     printf("ï¿½ó¶¨»ï¿½ï¿½ï¿½Ê§ï¿½ï¿½\n");
 					 break;
 				}
 					}
-			 case 16:printf("Çó¶àÏîÊ½×î´ó¹«ÒòÊ½\n");
-			         printf("ÇëÊäÈëµÚÒ»¸ö¶àÏîÊ½ÐòºÅ\n");
+			 case 16:printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			         scanf("%d",&pos1);
 			         while(1){
 			       	   if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]!=NULL))
 			       	       break;
-			       	   printf("ÇëÖØÐÂÊäÈëµÚÒ»¸ö¶àÏîÊ½ÐòºÅ\n");
+			       	   printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	   scanf("%d",&pos1);
 			         }
-			         printf("ÇëÊäÈëµÚ¶þ¸ö¶àÏîÊ½ÐòºÅ\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			         scanf("%d",&pos2);
 			         while(1){
 			       	     if((pos2>=1)&&(pos2<=(*psumpolyn))&&(Polynlink[pos2-1]!=NULL))
 			       	         break;
-			       	     printf("ÇëÖØÐÂÊäÈëµÚ¶þ¸ö¶àÏîÊ½ÐòºÅ\n");
+			       	     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	     scanf("%d",&pos2);
 			         }
-			         printf("ÇëÊäÈë×î´ó¹«ÒòÊ½ÐòºÅ\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			         scanf("%d",&pos3);
 			         while(1){
 			       	     if((pos3>=1)&&(pos3<=(*psumpolyn))&&(Polynlink[pos3-1]==NULL))
 			       	         break;
-			       	     printf("ÇëÖØÐÂÊäÈë×î´ó¹«ÒòÊ½ÐòºÅ\n");
+			       	     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	     scanf("%d",&pos3);
-			         } 
+			         }
 			         Fullprotection(Polynlink,psumpolyn);
 			         Initpolyn(L);
 			         if(!L)
 			             return overflow;
 			         Polynlink[pos3-1]=L;
 			         if(Gcdpolyn(Polynlink[pos1-1],Polynlink[pos2-1],Polynlink[pos3-1])==ok)
-				         printf("Çó×î´ó¹«ÒòÊ½³É¹¦\n");
-					 else 
-					     printf("Çó×î´ó¹«ÒòÊ½Ê§°Ü\n");
+				         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½É¹ï¿½\n");
+					 else
+					     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½Ê§ï¿½ï¿½\n");
                      break;
-			 case 17:printf("Çó¶àÏîÊ½×îÐ¡¹«±¶Ê½\n");
-			         printf("ÇëÊäÈëµÚÒ»¸ö¶àÏîÊ½ÐòºÅ\n");
+			 case 17:printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Ê½\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			         scanf("%d",&pos1);
 			         while(1){
 			       	   if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]!=NULL))
 			       	       break;
-			       	   printf("ÇëÖØÐÂÊäÈëµÚÒ»¸ö¶àÏîÊ½ÐòºÅ\n");
+			       	   printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	   scanf("%d",&pos1);
 			         }
-			         printf("ÇëÊäÈëµÚ¶þ¸ö¶àÏîÊ½ÐòºÅ\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			         scanf("%d",&pos2);
 			         while(1){
 			       	     if((pos2>=1)&&(pos2<=(*psumpolyn))&&(Polynlink[pos2-1]!=NULL))
 			       	         break;
-			       	     printf("ÇëÖØÐÂÊäÈëµÚ¶þ¸ö¶àÏîÊ½ÐòºÅ\n");
+			       	     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	     scanf("%d",&pos2);
 			         }
-			         printf("ÇëÊäÈë×îÐ¡¹«±¶Ê½ÐòºÅ\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			         scanf("%d",&pos3);
 			         while(1){
 			       	     if((pos3>=1)&&(pos3<=(*psumpolyn))&&(Polynlink[pos3-1]==NULL))
 			       	         break;
-			       	     printf("ÇëÖØÐÂÊäÈë×îÐ¡¹«Òò±¶Ê½ÐòºÅ\n");
+			       	     printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	     scanf("%d",&pos3);
-			         } 
+			         }
 			         Fullprotection(Polynlink,psumpolyn);
 			         Initpolyn(L);
 			         if(!L)
 			             return overflow;
 			         Polynlink[pos3-1]=L;
 			         if(Lcmpolyn(Polynlink[pos1-1],Polynlink[pos2-1],Polynlink[pos3-1])==ok)
-				         printf("Çó×îÐ¡¹«±¶Ê½³É¹¦\n");
-					 else 
-					     printf("Çó×îÐ¡¹«±¶Ê½Ê§°Ü\n");
+				         printf("ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Ê½ï¿½É¹ï¿½\n");
+					 else
+					     printf("ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½ï¿½ï¿½Ê½Ê§ï¿½ï¿½\n");
 					 break;
-			 case 18:printf("¶àÏîÊ½¸´ºÏÔËËã\n");
-			         printf("ÇëÊäÈëÔËËãÐòÁÐ,ÊäÈë#½áÊø\n");
+			 case 18:printf("ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½,ï¿½ï¿½ï¿½ï¿½#ï¿½ï¿½ï¿½ï¿½\n");
 			         Cleararray(input);
 			         fflush(stdin);
 			         for(j=0;(ch=getchar())!='#';j++){
@@ -600,23 +600,23 @@ int main(void)
 			         printf("%c",input[0]);
 			         input[j++]='#';
 			         input[j]='\0';
-			         printf("ÇëÊäÈëÐÂ¶àÏîÊ½ÐòºÅ\n"); 
+			         printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			         scanf("%d",&pos1);
 			         while(1){
 			       	        if((pos1>=1)&&(pos1<=(*psumpolyn))&&(Polynlink[pos1-1]==NULL))
 			       	            break;
-			       	        printf("ÇëÖØÐÂÊäÈëÐÂ¶àÏîÊ½ÐòºÅ\n");
+			       	        printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¶ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½\n");
 			       	        scanf("%d",&pos1);
 			         }
-			         Initpolyn(L); 
+			         Initpolyn(L);
 			         if(!L)
 			             return overflow;
 			         Polynlink[pos1-1]=L;
 			         if(Multicalculation(input,Polynlink,Polynlink[pos1-1],psumpolyn)==ok)
-					     printf("¶àÏîÊ½¸´ºÏÔËËã³É¹¦\n");
+					     printf("ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¹ï¿½\n");
 					 else
-					     printf("¶àÏîÊ½¸´ºÏÔËËãÊ§°Ü\n");
-					 break;	 						 
+					     printf("ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½ï¿½\n");
+					 break;
 	    }
     }
     return ok;
@@ -624,7 +624,7 @@ int main(void)
 Status Printpolyn(Linklist L){
 	Lnode *p=NULL;
 	if(!L){
-		printf("¶àÏîÊ½Î´±»¶¨Òå.\n");
+		printf("ï¿½ï¿½ï¿½ï¿½Ê½Î´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.\n");
 	    return error;
 	}
 	p=L->next;
@@ -661,7 +661,7 @@ Status Printpolyn(Linklist L){
 			        printf("%lf",p->coef);
 			    else
 			        printf("%lfX",p->coef);
-		    }    
+		    }
 	    }
     }
 	printf("\n");
@@ -704,7 +704,7 @@ Status Createpolyn(Linklist &L){
 	int expn;
 	Lnode *s;
 	char F[100]={0},coe[10]={0},exp[10]={0};
-	printf("ÇëÊäÈë¶àÏîÊ½\n");
+	printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½\n");
 	fflush(stdin);
 	gets(F);
 	cut(F);
@@ -765,7 +765,7 @@ Status Createpolyn(Linklist &L){
 		for(int z=0;z<10;exp[z]=0,coe[z]=0,z++);
     }
 	/*while(1){
-		printf("ÇëÊäÈëÏµÊýºÍÖ¸Êý(ÏµÊýÎª0Ê±½áÊø)\n");
+		printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½(Ïµï¿½ï¿½Îª0Ê±ï¿½ï¿½ï¿½ï¿½)\n");
 		scanf("%lf",&coef);
 		scanf("%d",&expn);
 		if(fabs(coef)<0.000001)
@@ -782,16 +782,16 @@ Status Destroypolyn(Linklist &L){
 	Lnode *p=L,*q=NULL;
 	while(p){
 		q=p->next;
-		p=NULL; 
+		p=NULL;
 		free(p);
 		p=q;
-	} 
+	}
 	L=NULL;
 	return ok;
 }
 Status Clearpolyn(Linklist &L){
 	Lnode *p,*q;
-	if(!L) 
+	if(!L)
 	    return error;
 	p=L->next;
 	while(p){
@@ -801,7 +801,7 @@ Status Clearpolyn(Linklist &L){
 	}
 	L->next=NULL;
 	return ok;
-}	
+}
 Status Copypolyn(Linklist La,Linklist &Lb){
 	if(!La||!Lb)
 	    return error;
@@ -817,7 +817,7 @@ Status Copypolyn(Linklist La,Linklist &Lb){
 	pb->next=NULL;
 	return ok;
 }
-Status Addpolyn(Linklist La,Linklist Lb,Linklist &Lc){//Ç°ÌáÊÇlalblc¶¼ÓÐÍ·½áµã  
+Status Addpolyn(Linklist La,Linklist Lb,Linklist &Lc){//Ç°ï¿½ï¿½ï¿½ï¿½lalblcï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½
     if(!La||!Lb||!Lc)
         return error;
     Lnode *pa=NULL,*pb=NULL,*pc=NULL,*p=NULL;
@@ -832,7 +832,7 @@ Status Addpolyn(Linklist La,Linklist Lb,Linklist &Lc){//Ç°ÌáÊÇlalblc¶¼ÓÐÍ·½áµã
     			    return overflow;
     			pc->next=p;
     			Setnode(pc->next,pa->coef,pa->expn);
-    			pa=pa->next; 
+    			pa=pa->next;
     			pc=pc->next;
     		}
     		else{
@@ -858,7 +858,7 @@ Status Addpolyn(Linklist La,Linklist Lb,Linklist &Lc){//Ç°ÌáÊÇlalblc¶¼ÓÐÍ·½áµã
     		    return overflow;
     		pc->next=p;
    			Setnode(pc->next,pb->coef,pb->expn);
-   			pb=pb->next; 
+   			pb=pb->next;
    			pc=pc->next;
     	}
     }
@@ -882,8 +882,8 @@ Status Addpolyn(Linklist La,Linklist Lb,Linklist &Lc){//Ç°ÌáÊÇlalblc¶¼ÓÐÍ·½áµã
    	}
    	pc=NULL;
     return ok;
-} 
-Status Negtivepolyn(Linklist La,Linklist &Lb){//Ç°ÌáÊÇLa£¬Lb¶¼ÓÐÍ·½áµã£» 
+}
+Status Negtivepolyn(Linklist La,Linklist &Lb){//Ç°ï¿½ï¿½ï¿½ï¿½Laï¿½ï¿½Lbï¿½ï¿½ï¿½ï¿½Í·ï¿½ï¿½ï¿½ã£»
 	if(!La||!Lb)
 	    return error;
 	Lnode *pa=NULL,*pb=NULL,*p=NULL;
@@ -893,8 +893,8 @@ Status Negtivepolyn(Linklist La,Linklist &Lb){//Ç°ÌáÊÇLa£¬Lb¶¼ÓÐÍ·½áµã£»
 		    return error;
 		pb->next=p;
 		Setnode(pb->next,-pa->coef,pa->expn);
-		pb=pb->next; 
-    } 
+		pb=pb->next;
+    }
 	pb->next=NULL;
 	return ok;
 }
@@ -906,7 +906,7 @@ Status Negtiveselfpolyn(Linklist &La){
 		pa->next->coef=-(pa->next->coef);
 	return ok;
 }
-Status Substractpolyn(Linklist La,Linklist &Lb,Linklist &Lc){//LaÎª±»¼õ¶àÏîÊ½£¬Lb¼õ¶àÏîÊ½£» 
+Status Substractpolyn(Linklist La,Linklist &Lb,Linklist &Lc){//LaÎªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½Lbï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½
 	if(!La||!Lb)
 	    return error;
 	Negtiveselfpolyn(Lb);
@@ -928,9 +928,9 @@ Status Modifyonlycoef(Linklist &L){
 	if(!L)
 	    return error;
 	for(p=L;p->next;p=p->next){
-		printf("ÊÇ·ñÐÞ¸ÄÖ¸ÊýÎª%dµÄ½áµãµÄÏµÊý?\nÈôÐÞ¸ÄÇëÊäÈë#£¬²»ÐÞ¸ÄÇëÊäÈëÆäËû\n",p->next->expn);
+		printf("ï¿½Ç·ï¿½ï¿½Þ¸ï¿½Ö¸ï¿½ï¿½Îª%dï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½?\nï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½#ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n",p->next->expn);
 		if(getchar()=='#'){
-			printf("ÇëÊäÈëÐÞ¸ÄºóµÄÏµÊý\n");
+			printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸Äºï¿½ï¿½ï¿½Ïµï¿½ï¿½\n");
 			scanf("%lf",newcoef);
 			if(fabs(newcoef)<0.000001){
 				q=p->next->next;
@@ -940,24 +940,24 @@ Status Modifyonlycoef(Linklist &L){
 			}
 			else
 			    p->next->coef=newcoef;
-			printf("ÐÞ¸Ä³É¹¦\n");
-		} 
+			printf("ï¿½Þ¸Ä³É¹ï¿½\n");
+		}
 	}
 	return ok;
 }
-Status Modifyonlyexpn(Linklist &L){//////////////////»¹Ã»ÏëºÃ£¡£¡£¡£¡ 
+Status Modifyonlyexpn(Linklist &L){//////////////////ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	int newexpn=0,notequal=0;
 	Lnode *p=NULL,*q=NULL,*r=NULL,*s=NULL,*t=NULL;
 	if(!L)
 	    return error;
 	for(p=L;p->next;){
-		printf("ÊÇ·ñÐÞ¸ÄÖ¸ÊýÎª%dµÄ½áµãµÄÖ¸Êý?\nÈôÐÞ¸ÄÇëÊäÈë#£¬²»ÐÞ¸ÄÇëÊäÈëÆäËû\n",p->next->expn);
+		printf("ï¿½Ç·ï¿½ï¿½Þ¸ï¿½Ö¸ï¿½ï¿½Îª%dï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½?\nï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½#ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n",p->next->expn);
 		if(getchar()=='#'){
-			printf("ÇëÊäÈëÐÞ¸ÄºóµÄÖ¸Êý\n");
+			printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸Äºï¿½ï¿½ï¿½Ö¸ï¿½ï¿½\n");
 			scanf("%d",&newexpn);
-            
+
 			}
-			
+
 		}
 }
 Status Modifypolyn(Linklist &L){
@@ -968,7 +968,7 @@ Status Modifypolyn(Linklist &L){
 	Lnode *s;
 	Clearpolyn(L);
 	while(1){
-		printf("ÇëÊäÈëÏµÊýºÍÖ¸Êý(ÏµÊýÎª0Ê±½áÊø)\n");
+		printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½(Ïµï¿½ï¿½Îª0Ê±ï¿½ï¿½ï¿½ï¿½)\n");
 		scanf("%lf",&coef);
 		scanf("%d",&expn);
 		if(fabs(coef)<0.000001)
@@ -981,7 +981,7 @@ Status Modifypolyn(Linklist &L){
     }
 	return ok;
 }
-Status Coefexpnpolyn(Linklist La,Linklist &Lb,double c,int e){//°ÑLaµÄÏµÊý³ËÉÏc±¶£¬°ÑLaµÄÖ¸Êý³ËÉÏe±¶,´æµ½LbÖÐ£» 
+Status Coefexpnpolyn(Linklist La,Linklist &Lb,double c,int e){//ï¿½ï¿½Laï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½cï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Laï¿½ï¿½Ö¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½eï¿½ï¿½,ï¿½æµ½Lbï¿½Ð£ï¿½
 	Lnode *pa=NULL,*pb=NULL,*p=NULL;
 	if(!La||!Lb)
 	    return error;
@@ -998,7 +998,7 @@ Status Coefexpnpolyn(Linklist La,Linklist &Lb,double c,int e){//°ÑLaµÄÏµÊý³ËÉÏc±
 	}
 	return ok;
 }
-Status Addlocalpolyn(Linklist La,Linklist &Lb){//±¾µØ¼Ó·¨ ,¼Óµ½LbÀï; //²»ÄÜÓÃorderinsertÒòÎª·ÑÊ±¼ä£¬Ò²²»ÄÜ¹²ÓÃ½áµã£¡£¡£¡ if else Óï¾äºÃ£¡£¡£¡; 
+Status Addlocalpolyn(Linklist La,Linklist &Lb){//ï¿½ï¿½ï¿½Ø¼Ó·ï¿½ ,ï¿½Óµï¿½Lbï¿½ï¿½; //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½orderinsertï¿½ï¿½Îªï¿½ï¿½Ê±ï¿½ä£¬Ò²ï¿½ï¿½ï¿½Ü¹ï¿½ï¿½Ã½ï¿½ï¿½ã£¡ï¿½ï¿½ï¿½ï¿½ if else ï¿½ï¿½ï¿½ï¿½ï¿½Ã£ï¿½ï¿½ï¿½ï¿½ï¿½;
 	if(!La||!Lb)
 	    return error;
 	Lnode *pa=NULL,*pb=NULL,*p=NULL,*q=NULL;
@@ -1011,7 +1011,7 @@ Status Addlocalpolyn(Linklist La,Linklist &Lb){//±¾µØ¼Ó·¨ ,¼Óµ½LbÀï; //²»ÄÜÓÃord
 			    Setnode(p,pa->next->coef,pa->next->expn);
 			    p->next=pb->next;
 			    pb->next=p;
-			    pa=pa->next; 
+			    pa=pa->next;
 			    pb=pb->next;
 			}
 			else{
@@ -1039,10 +1039,10 @@ Status Addlocalpolyn(Linklist La,Linklist &Lb){//±¾µØ¼Ó·¨ ,¼Óµ½LbÀï; //²»ÄÜÓÃord
 		pb->next=p;
 		pb=pb->next;
 		pa=pa->next;
-	}    
+	}
 	return ok;
 }
-Status Substractlocalpolyn(Linklist &La,Linklist Lb){//±¾µØ¼õ·¨£¬¼õµ½±»¼õÊ½ÉÏ£» 
+Status Substractlocalpolyn(Linklist &La,Linklist Lb){//ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½Ï£ï¿½
 	if(!La||!Lb)
 	    return error;
 	if(Negtiveselfpolyn(Lb)==overflow)
@@ -1053,14 +1053,14 @@ Status Substractlocalpolyn(Linklist &La,Linklist Lb){//±¾µØ¼õ·¨£¬¼õµ½±»¼õÊ½ÉÏ£»
 	    return overflow;
 	return ok;
 }
-Status Multiplypolyn(Linklist La,Linklist Lb,Linklist &Lc){         //////²»È·¶¨£¡£¡£¡ 
+Status Multiplypolyn(Linklist La,Linklist Lb,Linklist &Lc){         //////ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	if(!La||!Lb||!Lc)
 	    return error;
 	Lnode *pa=NULL;
 	Linklist Ld=NULL;
 	int status;
 	if(Initpolyn(Ld)==overflow)
-	    return overflow; 
+	    return overflow;
 	for(pa=La;pa->next;pa=pa->next){
 		status=Coefexpnpolyn(Lb,Ld,pa->next->coef,pa->next->expn);
 		if(status==overflow)
@@ -1068,12 +1068,12 @@ Status Multiplypolyn(Linklist La,Linklist Lb,Linklist &Lc){         //////²»È·¶¨
 		if(status==error)
 		    return error;
 	    Addlocalpolyn(Ld,Lc);
-	    Clearpolyn(Ld); 
+	    Clearpolyn(Ld);
 	}
 	Destroypolyn(Ld);
 	return ok;
 }
-Status Dividepolyn(Linklist La,Linklist Lb,Linklist &Lc,Linklist &Ld){//La±»³ýÊ½,Lb³ýÊ½,LcÉÌÊ½,LdÓàÊ½
+Status Dividepolyn(Linklist La,Linklist Lb,Linklist &Lc,Linklist &Ld){//Laï¿½ï¿½ï¿½ï¿½Ê½,Lbï¿½ï¿½Ê½,Lcï¿½ï¿½Ê½,Ldï¿½ï¿½Ê½
 	if(!La||!Lb||!Lc||!Ld)
 	    return error;
     Lnode *pc=NULL,*p=NULL;
@@ -1089,12 +1089,12 @@ Status Dividepolyn(Linklist La,Linklist Lb,Linklist &Lc,Linklist &Ld){//La±»³ýÊ½
     	p=Makenode();
     	if(!p)
     	    return overflow;
-		Setnode(p,division,Le->next->expn-Lb->next->expn);   
+		Setnode(p,division,Le->next->expn-Lb->next->expn);
 		pc->next=p;
-		pc=pc->next; 	
+		pc=pc->next;
     	Coefexpnpolyn(Lb,Lf,division,Le->next->expn-Lb->next->expn);
     	Substractlocalpolyn(Le,Lf);
-		Clearpolyn(Lf);//±¾µØ¼õ·¨£¬¼õµ½±»¼õÊ½ÉÏ£» 
+		Clearpolyn(Lf);//ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½Ï£ï¿½
     }
     Copypolyn(Le,Ld);
     Destroypolyn(Le);
@@ -1127,11 +1127,11 @@ Status Diffcoefpolyn(Linklist La,Linklist &Lb){
     	if(pa->next->expn!=0){
     	    Setnode(p,(pa->next->expn)*(pa->next->coef),pa->next->expn-1);
     	    pb->next=p;
-			pb=pb->next; 
+			pb=pb->next;
         }
-	} 
+	}
 	return ok;
-} 
+}
 Status Ndiffcoefpolyn(Linklist La,Linklist &Lb,int n){
 	if(!La||!Lb||n<0)
 	    return error;
@@ -1153,7 +1153,7 @@ Status Ndiffcoefpolyn(Linklist La,Linklist &Lb,int n){
 	do{
 		Diffcoefpolyn(Ld,Lc);
 		Copypolyn(Lc,Lb);
-		Clearpolyn(Ld);	
+		Clearpolyn(Ld);
 		Copypolyn(Lc,Ld);
 		Clearpolyn(Lc);
 		i++;
@@ -1164,7 +1164,7 @@ Status Ndiffcoefpolyn(Linklist La,Linklist &Lb,int n){
 	Destroypolyn(Lc);
 	Destroypolyn(Ld);
 	if(Lb->next==NULL)
-		printf("ÔÚµÚ%d´ÎÇóµ¼ºó¶àÏîÊ½ÎªNULL\n",j);
+		printf("ï¿½Úµï¿½%dï¿½ï¿½ï¿½óµ¼ºï¿½ï¿½ï¿½ï¿½ï¿½Ê½ÎªNULL\n",j);
 	return ok;
 }
 Status Indfintegralpolyn(Linklist La,Linklist &Lb){
@@ -1177,7 +1177,7 @@ Status Indfintegralpolyn(Linklist La,Linklist &Lb){
 		    return overflow;
 		Setnode(p,pa->next->coef/(pa->next->expn+1),pa->next->expn+1);
 		pb->next=p;
-		pb=pb->next; 
+		pb=pb->next;
 	}
 	return ok;
 }
@@ -1225,7 +1225,7 @@ Status Gcdpolyn(Linklist La,Linklist Lb,Linklist &Lc){
 	if(La->next->expn>=Lb->next->expn){
 	    Copypolyn(La,Le);
 	    Copypolyn(Lb,Lf);
-    } 
+    }
     else{
     	Copypolyn(La,Lf);
 	    Copypolyn(Lb,Le);
@@ -1273,7 +1273,7 @@ Status Lcmpolyn(Linklist La,Linklist Lb,Linklist &Lc){
 	    return overflow;
 	return ok;
 }
-Status ScanfDprotection(char str[],double &sum){//ÊÊÓÃÓÚÏµÊý±£»¤; 
+Status ScanfDprotection(char str[],double &sum){//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½;
 	int i,j,k,m,n,sum1,l,p,q;
 	double sum2;
 	for(p=0,q=0,l=0;str[l]!='\0';l++){
@@ -1302,15 +1302,15 @@ Status ScanfIprotection(char str[],int &sum){
     sum=0;
 	if(str[0]=='\0')
 	    return error;
-	if(str[0]=='-'){//Îª¸ºÊýÊ±£º 
-		for(i=0,j=0;str[i]!='\0';i++){//iÍ³¼ÆÓÐ¼¸¸öÔªËØ£¬jÍ³¼Æ¼¸¸ö·ÇÊý×ÖÔªËØ 
+	if(str[0]=='-'){//Îªï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+		for(i=0,j=0;str[i]!='\0';i++){//iÍ³ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½Ôªï¿½Ø£ï¿½jÍ³ï¿½Æ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
 			if(str[i]<'0'||str[i]>'9')
 			    j++;
 		}
 		if(j>1)
 		    return error;
 		else{
-			if((i>1&&str[1]=='0')||i==1)//Ê×¸öÊý×Ö Îª0£¬error! ,Ã»ÓÐÊý×Ö£¬error! 
+			if((i>1&&str[1]=='0')||i==1)//ï¿½×¸ï¿½ï¿½ï¿½ï¿½ï¿½ Îª0ï¿½ï¿½error! ,Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½error!
 			    return error;
 			else{
 				sum=str[1]-'0';
@@ -1322,13 +1322,13 @@ Status ScanfIprotection(char str[],int &sum){
 		}
 	}
 	else{
-		if(str[0]=='0'){//Ê×Êý×ÖÎª0Ê±£¬ÈôÆäÓàÊý×ÖÈ«Îª0£¬sum=0£¬·ñÔò£¬error! 
+		if(str[0]=='0'){//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È«Îª0ï¿½ï¿½sum=0ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½error!
 			if(str[1]=='0')
 			    return ok;
 			return error;
 		}
-		if(str[0]>'0'||str[0]<'9'){//ÕýÊýÊ±£º 
-			for(i=0,j=0;str[i]!='\0';i++){//iÍ³¼ÆÓÐ¼¸¸öÔªËØ£¬jÍ³¼Æ¼¸¸ö·ÇÊý×ÖÔªËØ 
+		if(str[0]>'0'||str[0]<'9'){//ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+			for(i=0,j=0;str[i]!='\0';i++){//iÍ³ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½Ôªï¿½Ø£ï¿½jÍ³ï¿½Æ¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
 			    if(str[i]<'0'||str[i]>'9')
 			        j++;
 	    	}
@@ -1339,7 +1339,7 @@ Status ScanfIprotection(char str[],int &sum){
 		        for(i=1;str[i]!='\0';i++)
 		            sum=sum*10+str[i]-'0';
 	            return ok;
-		    } 
+		    }
 		}
 		else
 		    return error;
@@ -1348,7 +1348,7 @@ Status ScanfIprotection(char str[],int &sum){
 Status Printtaylorpolyn(Linklist L,double taylor){
 	Lnode *p=NULL;
 	if(!L){
-		printf("¶àÏîÊ½Î´±»¶¨Òå.\n");
+		printf("ï¿½ï¿½ï¿½ï¿½Ê½Î´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.\n");
 	    return error;
 	}
 	p=L->next;
@@ -1357,7 +1357,7 @@ Status Printtaylorpolyn(Linklist L,double taylor){
 		return ok;
 	}
 	if(fabs(taylor)<0.000001){
-		printf("Âí¿ËÀÍÁÖÕ¹¿ª\n");
+		printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õ¹ï¿½ï¿½\n");
 		Printpolyn(L);
 		return ok;
 	}
@@ -1392,8 +1392,8 @@ Status Printtaylorpolyn(Linklist L,double taylor){
 			            printf("%lf",p->coef);
 			        else
 			            printf("%lf(X-%lf)",p->coef,taylor);
-		        }       
-	        }    
+		        }
+	        }
         }
 	    printf("\n");
 	}
@@ -1428,9 +1428,9 @@ Status Printtaylorpolyn(Linklist L,double taylor){
     	            else
 		                printf("%lf(X+%lf)",p->coef,ntaylor);
 			    }
-	        }    
+	        }
         }
-	    printf("\n");   
+	    printf("\n");
 	}
 	return ok;
 }
@@ -1440,16 +1440,16 @@ Status Deletennode(Linklist L,int n){
 	    return error;
 	int i;
 	Lnode *p=NULL;
-	for(i=0,p=L;p->next&&i<n-1;p=p->next,i++);//ÕÒÇ°Ç÷!!! 
+	for(i=0,p=L;p->next&&i<n-1;p=p->next,i++);//ï¿½ï¿½Ç°ï¿½ï¿½!!!
 	if(!p->next||i>n){
-	    printf("ÊäÈëÖµ·Ç·¨\n");
+	    printf("ï¿½ï¿½ï¿½ï¿½Öµï¿½Ç·ï¿½\n");
 	    return error;
 	}
 	else{
 		q=p->next;
 		p->next=q->next;
 		free(q);
-		return ok;	
+		return ok;
 	}
 }
 Status Deletenode(Linklist L,int expn){
@@ -1463,7 +1463,7 @@ Status Deletenode(Linklist L,int expn){
 			p->next=q;
 			return ok;
 		}
-	} 
+	}
 	return error;
 }
 Status Insertnode(Linklist L,double newcoef,int newexpn){
@@ -1488,15 +1488,15 @@ Status Insertnode(Linklist L,double newcoef,int newexpn){
 		 	    if(fabs(newcoef+p->next->coef)<0.000001){
 				    q=p->next->next;
 				    free(p->next);
-				    p->next=q; 
+				    p->next=q;
 				    return ok;
 			    }
 		     	else{
-			        p->next->coef+=newcoef; 
+			        p->next->coef+=newcoef;
 			        return ok;
 				}
 		    }
-		} 
+		}
 	}
     r=Makenode();
 	if(!r)
@@ -1512,9 +1512,9 @@ Status Modifycoefexpn(Linklist L){
 	int newcoef,newexpn;
 	Lnode *p=NULL,*q=NULL,*r=NULL,*s=NULL;
 	for(p=L;p->next;){
-		printf("ÊÇ·ñÐÞ¸ÄÖ¸ÊýÎª%dµÄ½áµãµÄÏµÊýºÍÖ¸Êý?\nÈôÐÞ¸ÄÇëÊäÈë#£¬²»ÐÞ¸ÄÇëÊäÈëÆäËû\n",p->next->expn);
+		printf("ï¿½Ç·ï¿½ï¿½Þ¸ï¿½Ö¸ï¿½ï¿½Îª%dï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½?\nï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½#ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n",p->next->expn);
 		if(getchar()=='#'){
-			printf("ÇëÊäÈëÐÂÏµÊýºÍÖ¸Êý\n");
+			printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ï¿½ï¿½Ö¸ï¿½ï¿½\n");
 			scanf("%d%d",&newcoef,&newexpn);
 			if(fabs(newcoef)<0.000001){
 				r=p->next->next;
@@ -1524,7 +1524,7 @@ Status Modifycoefexpn(Linklist L){
 			else{
 				if(p->next->expn<=newexpn){
 					if(p->next->expn==newexpn){
-						p->next->coef=newcoef; 
+						p->next->coef=newcoef;
 						p=p->next;
 					}
 					else{
@@ -1542,7 +1542,7 @@ Status Modifycoefexpn(Linklist L){
 			}
 		}
 		else
-		    p=p->next; 
+		    p=p->next;
 	}
 }
 Status Judgeoperator(char c){
@@ -1553,8 +1553,8 @@ Status Judgeoperator(char c){
 Status Judgeoperand(char *s,int &sum){
     if(ScanfIprotection(s,sum)==ok)
 	    return ok;
-	else 
-	    return error;	
+	else
+	    return error;
 }
 char Prior(char left,char right){
 	if(Judgeoperator(left)==False||Judgeoperator(right)==False)
@@ -1578,7 +1578,7 @@ char Prior(char left,char right){
 	if(left=='-'){
 		if(right=='+')
 		    return '>';
-		if(right=='-') 
+		if(right=='-')
 		    return '>';
 		if(right=='*')
 		    return '<';
@@ -1594,7 +1594,7 @@ char Prior(char left,char right){
 	if(left=='*'){
 		if(right=='+')
 		    return '>';
-		if(right=='-') 
+		if(right=='-')
 		    return '>';
 		if(right=='*')
 		    return '>';
@@ -1610,7 +1610,7 @@ char Prior(char left,char right){
 	if(left=='/'){
 		if(right=='+')
 		    return '>';
-		if(right=='-') 
+		if(right=='-')
 		    return '>';
 		if(right=='*')
 		    return '>';
@@ -1642,7 +1642,7 @@ char Prior(char left,char right){
 	if(left==')'){
 		if(right=='+')
 		    return '>';
-		if(right=='-') 
+		if(right=='-')
 		    return '>';
 		if(right=='*')
 		    return '>';
@@ -1718,17 +1718,17 @@ Status Multicalculation(char *input,Linklist *Polynlink,Linklist &L,int *psumpol
     Cleararray(operand);
 	if(Initlinkliststack(opndtop)==ok&&Initcharstack(optrtop)==ok);
 	else{
-		printf("Òç³ö£¡ÍË³ö\n");
+		printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½\n");
 		return overflow;
 	}
 	Pushchar(optrtop,'#');
-	for(;*traverse!='\0';traverse++){ 
+	for(;*traverse!='\0';traverse++){
 		if(*traverse=='P'){
 			traverse++;
-			for(j=0;Judgeoperator(*traverse)!=True;j++,traverse++)//operandÊý×éÓ¦¹éÁã£¡£¡£¡ 
+			for(j=0;Judgeoperator(*traverse)!=True;j++,traverse++)//operandï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ã£¡ï¿½ï¿½ï¿½ï¿½
 				operand[j]=*traverse;
 			if(Judgeoperand(operand,position)==error&&position<=0){
-				printf("ÊäÈë×Ö·û·Ç·¨£¬¼´½«ÍË³ö£¬ÇëÖØÐÂÊäÈë\n");
+				printf("ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 				return error;
 			}
 			else{
@@ -1738,7 +1738,7 @@ Status Multicalculation(char *input,Linklist *Polynlink,Linklist &L,int *psumpol
 					traverse--;
 				}
 				else{
-					printf("ÊäÈëÊý¾Ý·¶Î§·Ç·¨,¼´½«ÍË³ö£¬ÇëÖØÐÂÊäÈë\n");
+					printf("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý·ï¿½Î§ï¿½Ç·ï¿½,ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 						return error;
 				}
 			}
@@ -1767,17 +1767,17 @@ Status Multicalculation(char *input,Linklist *Polynlink,Linklist &L,int *psumpol
 							Poplinklist(opndtop,Lb);
 							Poplinklist(opndtop,La);
 							Popchar(optrtop,topchar);
-			                Initpolyn(Lc); 
+			                Initpolyn(Lc);
 			                if(!Lc)
 			                    return overflow;
 							if(Calculatepolyn(topchar,La,Lb,Lc)!=ok){
-								printf("ÊäÈë·Ç·¨£¬·ÖÄ¸ÎªNULL£¬¼´½«ÍË³ö£¬ÇëÖØÐÂÊäÈë\n");
+								printf("ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ÎªNULLï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 								return error;
 							}
 							Pushlinklist(opndtop,Lc);
 						}
 						else{
-							printf("ÊäÈë·Ç·¨£¬ÊäÈë×Ö·û²»ÎªÔËËã·û£¬¼´½«ÍË³ö£¬ÇëÖØÐÂÊäÈë\n");
+							printf("ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
 							return error;
 						}
 					}

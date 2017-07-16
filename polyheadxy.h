@@ -1,8 +1,8 @@
 #include<stdio.h>
 #include<stdlib.h>
-#include<math.h> 
+#include<math.h>
 #include<string.h>
-#include<windows.h>
+//#include<windows.h>
 #define List_Init_Size 100
 #define ListIncrement 10
 #define True 1
@@ -10,10 +10,10 @@
 #define ok 1
 #define error 0
 #define infeasible -1
-#define overflow -2 
+#define overflow -2
 #define yx(k,x,m) (k*pow(x,m))
 #define inf(max,min) ((max-min)/100000)
-typedef int Status; 
+typedef int Status;
 typedef int Length;
 typedef struct Lnode{
     double coef;
@@ -52,21 +52,21 @@ Lnode *Makenode(){
 }
 Status Setnode(Lnode *p,double c,int e){
 	if(!p)
-	    return error; 
+	    return error;
 	p->coef=c;
 	p->expn=e;
 	p->next=NULL;
 	return ok;
-} 
-Status Initpolyn(Linklist &L){//´øÍ·½áµãµÄÁ´±í 
+}
+Status Initpolyn(Linklist &L){//ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	if(L=Makenode()){
 		L->next=NULL;
 		return ok;
 	}
 	else
-	    return overflow; 
+	    return overflow;
 }
-Length Lengthpolyn(Linklist L){//ÇóÁ´±í³¤ 
+Length Lengthpolyn(Linklist L){//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	if(!L)
 	    return -1;
 	int len=0;
@@ -79,7 +79,7 @@ Status Orderinsert(Linklist L,Lnode *s,double c,int e){
 	p=L;
 	if(!L)
 	    return error;
-	for(;p->next&&p->next->expn>=e;p=p->next){ 
+	for(;p->next&&p->next->expn>=e;p=p->next){
 	    if(p->next->expn==e){
 	    	p->next->coef+=c;
 	    	if(fabs(p->next->coef)<0.000001){
@@ -102,9 +102,9 @@ Status Arrfull(Linklist *a,int *psum){
 		if(!a[i])
 		    return False;
 	}
-	return True; 
+	return True;
 }
-Linklist Createlenpolyn(Length len){//´øÍ·½áµãµÄ 
+Linklist Createlenpolyn(Length len){//ï¿½ï¿½Í·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	int i;
 	Lnode *p=NULL,*L=NULL;
 	L=Makenode();
@@ -114,7 +114,7 @@ Linklist Createlenpolyn(Length len){//´øÍ·½áµãµÄ
 	for(i=1;i<=len;i++){
 		p=Makenode();
 		if(!p)
-		    return NULL; 
+		    return NULL;
 		p->next=L->next;
 		L->next=p;
 	}
@@ -174,7 +174,7 @@ Status Popchar(Linkoptr &top,char &optr){
 	Loptr *p=NULL;
 	optr=top->operators;
 	p=top;
-	top=top->cnext; 
+	top=top->cnext;
 	free(p);
 	return ok;
 }
@@ -184,7 +184,7 @@ Status Initcharstack(Linkoptr &top){
 	    return overflow;
 	return ok;
 }
-void cut(char a[])//×Ö·û´®ÇÐ¸î 
+void cut(char a[])//ï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ð¸ï¿½
 {
 	char *p=a,*q=a,*n=a;
 	int i=0;

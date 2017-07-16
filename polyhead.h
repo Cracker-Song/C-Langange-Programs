@@ -1,4 +1,4 @@
-#include<C:\Users\liang\Desktop\cpp\head.h>
+#include"head.h"
 typedef struct lnode
 {
 	float coe;
